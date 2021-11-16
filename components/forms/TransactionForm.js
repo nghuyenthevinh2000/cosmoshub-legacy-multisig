@@ -54,7 +54,7 @@ class TransactionForm extends React.Component {
   };
 
   handleCreate = async () => {
-    if (this.state.toAddress.length === 45) {
+    if (this.state.toAddress.length === 43) {
       this.setState({ processing: true });
       const tx = this.createTransaction(
         this.state.toAddress,
@@ -92,7 +92,7 @@ class TransactionForm extends React.Component {
         </div>
         <div className="form-item">
           <Input
-            label="Amount (ATOM)"
+            label="Amount (OSMO)"
             name="amount"
             type="number"
             value={this.state.amount}
@@ -101,7 +101,7 @@ class TransactionForm extends React.Component {
         </div>
         <div className="form-item">
           <Input
-            label="Gas Limit (UATOM)"
+            label="Gas Limit (UOSMO)"
             name="gas"
             type="number"
             value={this.state.gas}
